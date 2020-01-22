@@ -10,7 +10,7 @@ router.get("/", (req, res, next) => {
   dns.resolve(url, (err, records) => {
     if (!err) {
       res.status(200).json({
-        name: records
+        ip: records
       });
     } else {
       res.status(500).json({
