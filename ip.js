@@ -6,7 +6,6 @@ const dns = require("dns");
 
 router.get("/", (req, res, next) => {
   const url = req.query.url;
-  console.log("Hey tehre", req.query);
   dns.resolve(url, (err, records) => {
     if (!err) {
       res.status(200).json({
